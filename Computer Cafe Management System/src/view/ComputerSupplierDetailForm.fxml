@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1092.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ComputerSupplierDetailFormController">
+   <children>
+      <Separator layoutX="74.0" layoutY="68.0" prefHeight="12.0" prefWidth="954.0" />
+      <JFXTextField fx:id="txtTelNo" focusColor="BLACK" labelFloat="true" layoutX="520.0" layoutY="111.0" prefHeight="40.0" prefWidth="169.0" promptText="Tel No" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtSupplierName" focusColor="BLACK" labelFloat="true" layoutX="301.0" layoutY="111.0" prefHeight="40.0" prefWidth="169.0" promptText="Supplier Name" unFocusColor="BLACK" />
+      <TableView fx:id="tblComputerSupplier" layoutX="83.0" layoutY="372.0" prefHeight="282.0" prefWidth="910.0">
+         <columns>
+            <TableColumn fx:id="colSupplierId" prefWidth="237.0" text="Supplier Id" />
+            <TableColumn fx:id="colComputerId" prefWidth="276.0" text="Computer Id" />
+            <TableColumn fx:id="colDate" prefWidth="203.0" text="Date" />
+            <TableColumn fx:id="colDelete" prefWidth="193.0" text="---" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="282.0" layoutY="289.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #1abc9c;" text="Save" />
+      <Label layoutX="74.0" layoutY="24.0" prefHeight="53.0" prefWidth="438.0" text="Computer Supplier Detail">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#1abc9c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXComboBox fx:id="cmbSupplierId" focusColor="BLACK" labelFloat="true" layoutX="85.0" layoutY="111.0" prefHeight="40.0" prefWidth="169.0" promptText="Supplier Id" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtAddress" focusColor="BLACK" labelFloat="true" layoutX="737.0" layoutY="111.0" prefHeight="40.0" prefWidth="169.0" promptText="Adress" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtPrice" focusColor="BLACK" labelFloat="true" layoutX="518.0" layoutY="206.0" prefHeight="40.0" prefWidth="169.0" promptText="Price" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtComputerType" focusColor="BLACK" labelFloat="true" layoutX="302.0" layoutY="207.0" prefHeight="40.0" prefWidth="169.0" promptText="Computer Type" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbComputerId" focusColor="BLACK" labelFloat="true" layoutX="85.0" layoutY="208.0" prefHeight="40.0" prefWidth="169.0" promptText="Computer Id" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtDate" focusColor="BLACK" labelFloat="true" layoutX="85.0" layoutY="289.0" onKeyReleased="#textFields_Key_Released" prefHeight="40.0" prefWidth="169.0" promptText="Enter Date" unFocusColor="BLACK" />
+   </children>
+</AnchorPane>

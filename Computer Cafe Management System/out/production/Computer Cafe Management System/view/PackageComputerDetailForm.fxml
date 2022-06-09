@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1092.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PackageComputerDetailFormController">
+   <children>
+      <Separator layoutX="74.0" layoutY="68.0" prefHeight="12.0" prefWidth="954.0" />
+      <JFXTextField fx:id="txtPackagePrice" focusColor="BLACK" labelFloat="true" layoutX="514.0" layoutY="111.0" prefHeight="40.0" prefWidth="169.0" promptText="Package Price" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtPackageName" focusColor="BLACK" labelFloat="true" layoutX="301.0" layoutY="111.0" prefHeight="40.0" prefWidth="169.0" promptText="Package Name" unFocusColor="BLACK" />
+      <TableView fx:id="tblPackageComputer" layoutX="83.0" layoutY="323.0" prefHeight="339.0" prefWidth="954.0">
+         <columns>
+            <TableColumn fx:id="colPackageId" prefWidth="323.0" text="Package Id" />
+            <TableColumn fx:id="colComputerId" prefWidth="341.0" text="Computer Id" />
+            <TableColumn fx:id="colDelete" prefWidth="289.0" text="---" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="751.0" layoutY="208.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="261.0" style="-fx-background-color: #1abc9c;" text="Save" />
+      <Label layoutX="74.0" layoutY="24.0" prefHeight="53.0" prefWidth="438.0" text="Package Computer Detail">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#1abc9c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXComboBox fx:id="cmbPackageId" focusColor="BLACK" labelFloat="true" layoutX="85.0" layoutY="111.0" prefHeight="40.0" prefWidth="169.0" promptText="Package Id" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtComputerPrice" focusColor="BLACK" labelFloat="true" layoutX="513.0" layoutY="206.0" prefHeight="40.0" prefWidth="169.0" promptText="Computer Price" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtComputerType" focusColor="BLACK" labelFloat="true" layoutX="302.0" layoutY="207.0" prefHeight="40.0" prefWidth="169.0" promptText="Computer Type" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbComputerId" focusColor="BLACK" labelFloat="true" layoutX="85.0" layoutY="208.0" prefHeight="40.0" prefWidth="169.0" promptText="Computer Id" unFocusColor="BLACK" />
+   </children>
+</AnchorPane>

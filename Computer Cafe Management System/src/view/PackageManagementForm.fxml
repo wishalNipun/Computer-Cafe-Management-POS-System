@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1092.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PackageManagementFormController">
+   <children>
+      <Label layoutX="74.0" layoutY="24.0" prefHeight="53.0" prefWidth="387.0" text="Package Management">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#1abc9c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Separator layoutX="74.0" layoutY="68.0" prefHeight="12.0" prefWidth="954.0" />
+      <JFXTextField fx:id="txtPackageId" focusColor="#000103" labelFloat="true" layoutX="93.0" layoutY="111.0" onKeyReleased="#textFields_Key_Released" prefHeight="40.0" prefWidth="169.0" promptText="Package Id" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtPackagePrice" focusColor="BLACK" labelFloat="true" layoutX="574.0" layoutY="111.0" onKeyReleased="#textFields_Key_Released" prefHeight="40.0" prefWidth="169.0" promptText="Package Price" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtPackageName" focusColor="BLACK" labelFloat="true" layoutX="342.0" layoutY="111.0" onKeyReleased="#textFields_Key_Released" prefHeight="40.0" prefWidth="169.0" promptText="Package Name" unFocusColor="BLACK" />
+      <TableView fx:id="tblPackage" layoutX="93.0" layoutY="204.0" prefHeight="450.0" prefWidth="910.0">
+         <columns>
+            <TableColumn fx:id="colPackageId" prefWidth="218.0" text="Package Id" />
+            <TableColumn fx:id="colPackageName" prefWidth="273.0" text="Package Name" />
+            <TableColumn fx:id="colPackagePrice" prefWidth="234.0" text="Package Price" />
+            <TableColumn fx:id="colDelete" prefWidth="184.0" text="---" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="893.0" layoutY="111.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #1abc9c;" text="Save" />
+      <JFXButton buttonType="RAISED" layoutX="965.0" layoutY="29.0" onAction="#btnNewOnAction" prefHeight="40.0" prefWidth="66.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 2.0em;" text="New +" />
+   </children>
+</AnchorPane>

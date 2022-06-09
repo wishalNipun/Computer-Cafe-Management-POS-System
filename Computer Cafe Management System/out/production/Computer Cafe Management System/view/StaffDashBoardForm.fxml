@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StaffDashBoardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#33485c" height="70.0" layoutX="208.0" stroke="#34495e" strokeType="INSIDE" width="1092.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#34495e" height="800.0" layoutX="-2.0" stroke="WHITE" strokeType="INSIDE" width="209.0" />
+      <AnchorPane fx:id="loadContext" blendMode="SRC_ATOP" layoutX="208.0" layoutY="70.0" prefHeight="730.0" prefWidth="1092.0" style="-fx-background-color: #ecf0f1;" />
+      <JFXButton layoutX="-3.0" layoutY="70.0" onAction="#btnAddPaymentForMemberOnAction" prefHeight="70.0" prefWidth="209.0" styleClass="btn" stylesheets="@../assert/style/css.css" text="Add Payment For Member" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/icon/wallet-96%20(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="5.0" layoutY="632.0" onAction="#btnPaymentReportOnAction" prefHeight="70.0" prefWidth="197.0" style="-fx-background-radius: 2.0em;" styleClass="btnReport" stylesheets="@../assert/style/css.css" text="Payment Report" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/icon/bill%20(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="lblDate" layoutX="832.0" layoutY="27.0" text="2020 - 10 -01" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1064.0" layoutY="27.0" text="20:04:36" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="754.0" layoutY="22.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#16a085" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="983.0" layoutY="22.0" text="Time : ">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#16a085" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton layoutX="1203.0" layoutY="25.0" onAction="#btnLogOutOnAction" styleClass="btnLogOut" stylesheets="@../assert/style/css.css" text="Log Out" />
+      <JFXButton layoutX="-3.0" layoutY="212.0" onAction="#btnMemberManagerOnAction" prefHeight="70.0" prefWidth="209.0" styleClass="btn" stylesheets="@../assert/style/css.css" text="Member Management" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/icon/member%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="-3.0" layoutY="283.0" onAction="#btnPackageManagementOnAction" prefHeight="70.0" prefWidth="209.0" styleClass="btn" stylesheets="@../assert/style/css.css" text="Package Management" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/icon/package-clock.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="70.0" fitWidth="209.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assert/images/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="-3.0" layoutY="141.0" onAction="#btnSearchMemberPaymentOnAction" prefHeight="70.0" prefWidth="209.0" styleClass="btn" stylesheets="@../assert/style/css.css" text="Search Member Payment" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/icon/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="8.0" layoutY="718.0" prefHeight="70.0" prefWidth="189.0" text=" Developed By Wishal Nipun Siriwardana." textAlignment="CENTER" textFill="#ecf0f1" wrapText="true">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1092.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberManagementFormController">
+   <children>
+      <Separator layoutX="74.0" layoutY="68.0" prefHeight="12.0" prefWidth="954.0" />
+      <JFXTextField fx:id="txtMemberId" focusColor="BLACK" labelFloat="true" layoutX="75.0" layoutY="111.0" onKeyReleased="#textFields_Key_Released" prefHeight="40.0" prefWidth="169.0" promptText="Member Id" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtTelNo" focusColor="BLACK" labelFloat="true" layoutX="477.0" layoutY="111.0" onKeyReleased="#textFields_Key_Released" prefHeight="40.0" prefWidth="169.0" promptText="Tel No" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtMemberName" focusColor="BLACK" labelFloat="true" layoutX="278.0" layoutY="111.0" onKeyReleased="#textFields_Key_Released" prefHeight="40.0" prefWidth="169.0" promptText="Member Name" unFocusColor="BLACK" />
+      <TableView fx:id="tblMember" layoutX="76.0" layoutY="204.0" prefHeight="450.0" prefWidth="934.0">
+         <columns>
+            <TableColumn fx:id="colMemberId" prefWidth="164.0" text="Member Id" />
+            <TableColumn fx:id="colMemberName" prefWidth="227.0" text="Member Name" />
+            <TableColumn fx:id="colTelNo" prefWidth="202.0" text="Tel No" />
+            <TableColumn fx:id="colAddress" prefWidth="227.0" text="Address" />
+            <TableColumn fx:id="colDelete" prefWidth="113.0" text="---" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtAddress" focusColor="BLACK" labelFloat="true" layoutX="674.0" layoutY="111.0" onKeyReleased="#textFields_Key_Released" prefHeight="40.0" prefWidth="169.0" promptText="Address" unFocusColor="BLACK" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="906.0" layoutY="111.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #1abc9c;" text="Save" />
+      <Label layoutX="74.0" layoutY="24.0" prefHeight="53.0" prefWidth="387.0" text="Member Management">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#1abc9c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="965.0" layoutY="29.0" onAction="#btnNewOnAction" prefHeight="40.0" prefWidth="66.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 2.0em;" text="New +" />
+   </children>
+</AnchorPane>
